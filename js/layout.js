@@ -9,13 +9,11 @@ $(function(){
     });
     resize();
 
-    //var value = $().scrollTop();
     var pos_index = $('#content-index').offset().top;
     var pos_work = $('#content-work').offset().top;
     var pos_about = $('#content-about').offset().top;
     $(window).scroll(function(){
         var value = $(this).scrollTop();
-        //console.log(value, pos_portfolio, pos_contact)
         if(value >= pos_index && value < pos_work){
             $('#menu li:nth-child(1)').addClass('active').siblings().removeClass('active');
             $('#header').removeClass('active');
@@ -45,7 +43,7 @@ $(function(){
     $('.btn_menu').on('click', function(){
         $('#menu').toggleClass('on');
     });
-    $('h1 a, a.btn_view, #menu li a').click(function(){
+    $('h1 a, a.btn_view, #menu a').click(function(){
         if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname){
             var $target = $(this.hash);
             $target = $target.length && $target;
@@ -68,7 +66,6 @@ $(function(){
     //guide info
     $('.info span').mouseenter(function(){
         var guide = $(this).text();
-        console.log(guide)
         $(this).append($('.'+guide))
         $(this).children('span').show();
     });

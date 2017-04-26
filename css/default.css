@@ -45,48 +45,6 @@ layout
 #content-index .txt{position:absolute; bottom:30%; width:100%; text-align:center; color:#fff;}
 #content-index strong{display:block; margin:0 0 12px; font-size:27px; font-weight:300;}
 #content-index p{font-size:16px;}
-/*#content-index{overflow:hidden; font-weight:bold; text-align:center; color:#fff; background:url(../images/bg2.jpg) no-repeat fixed center top; background-size:cover;}
-#content-index .bg{width:100%; height:100%; opacity:0; background:#000;}
-#content-index .article{position:fixed; top:60%; left:0; width:100%; font-weight:bold; text-align:center; color:#fff;}
-#content-index .name{font-size:5.8em;}
-#content-index .txt{font-size:3.3em;}
-.btn_view{position:absolute; left:50%; bottom:15px; width:88px; margin:0 0 0 -44px; padding:0 0 20px 0; text-align:center; color:#fff; background:url(../images/arrow_down.png) no-repeat center bottom;
-    animation:bounce .8s infinite; -webkit-animation:bounce .8s infinite;
-}
-@keyframes bounce{
-    0%{bottom:15px;}
-    50%{bottom:20px;}
-    100%{bottom:15px;}
-}
-@-webkit-keyframes bounce{
-    0%{bottom:15px;}
-    50%{bottom:20px;}
-    100%{bottom:15px;}
-}
-@keyframes move-left{
-	0%{left:-8px;}
-    100%{left:4px;}
-}
-@keyframes move-top{
-	0%{top:-19px;}
-    100%{top:6px;}
-}
-@keyframes move-right{
-	0%{right:-8px;}
-    100%{right:4px;}
-}
-@-webkit-keyframes move-left{
-	0%{left:-8px;}
-    100%{left:4px;}
-}
-@-webkit-keyframes move-top{
-	0%{top:-19px;}
-    100%{top:6px;}
-}
-@-webkit-keyframes move-right{
-	0%{right:-8px;}
-    100%{right:4px;}
-}*/
 
 #content-work{background:#000;}
 #content-work ul:after{clear:both; display:block; content:"";}
@@ -99,28 +57,6 @@ layout
 #content-work li:hover img{transform:scale(1.1);}
 #content-work li:hover .bg{opacity:.8;}
 #content-work li:hover .info{bottom:0;}
-/*#content-work li .info{position:absolute; top:0; left:0; width:100%; height:100%; padding:0 20px; font-size:1.3em; color:#fff; text-align:center; line-height:1.5; opacity:0; box-sizing:border-box; -webkit-box-sizing:border-box; transition:opacity .4s ease-out; background:#800000;}
-#content-work li .info:hover{opacity:.9;}
-#content-work li .info strong{display:block; margin:39% 0 0 0; font-size:2em;}
-#content-work li .info div{position:relative; display:inline; }
-#content-work li .info p{padding:0 0 10px 0;}
-#content-work li .info a{position:relative; display:inline-block; width:30px; height:30px; overflow:hidden; border-radius:50%;}
-#content-work a.link:hover{animation:rotate .3s; -webkit-animation:rotate .3s;}
-#content-work a.code{background:#fff;}
-#content-work a.code img{position:absolute;}
-#content-work a.code img:nth-child(1){top:6px; left:4px;}
-#content-work a.code img:nth-child(2){top:6px; left:12px;}
-#content-work a.code img:nth-child(3){top:6px; right:4px;}
-#content-work a.code:hover img:nth-child(1){animation:move-left .3s; -webkit-animation:move-left .3s;}
-#content-work a.code:hover img:nth-child(2){animation:move-top .3s; -webkit-animation:move-top .3s;}
-#content-work a.code:hover img:nth-child(3){animation:move-right .3s; -webkit-animation:move-right .3s;}
-#content-work span{position:absolute; top:22px; left:50%; padding:2px 0; white-space:nowrap; font-size:0.7em; border-radius:2px; background:#000;}
-#content-work li .info span:before{position:absolute; top:-8px; left:50%; content:""; width:0; margin:0 0 0 -4px; border:4px solid transparent; border-bottom-color:#000;}
-#content-work li .info span.site-link{width:60px; margin:0 0 0 -30px;}
-#content-work li .info span.sample{width:80px; margin:0 0 0 -40px;}
-#content-work li:last-child a{position:absolute; top:0; left:0; width:100%; height:100%; font-size:1.2em; text-align:center; color:#fff;}
-#content-work li:last-child span{position:absolute; top:45%; display:block; width:100%; text-align:center;}
-#content-work .guide span{display:none;}*/
 
 #portfolio_layer{position:fixed; top:0; left:0; z-index:10; display:none; width:100%; height:100%;}
 #portfolio_layer .bg{position:absolute; top:0; left:0; width:100%; height:100%; opacity:.8; background:#000;}
