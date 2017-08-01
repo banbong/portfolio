@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+//common var
+$font: 'Ubuntu', 'Nanum Gothic', '맑은고딕', dotum, '돋움', Gulim, '굴림', Verdana, sans-serif;
+$base-size: 13px;
+$color: #333;
+$point-color: #c00d10;
+$color-trans: color .2s;
+
+//mixin
+@mixin no-space{margin:0; padding:0;}
+@mixin rounded($radius){border-radius:$radius;}
+
+//animation
+@keyframes move{
+	0%{top:0;}
+	100%{top:-59px;}
+}
+@keyframes back{
+	0%{top:-59px;}
+	100%{top:0;}
+}
+
+/* default style */
+html, body{height:100%;}
+body{@include no-space; font-family:$font; font-size:$base-size; line-height:1.2; color:$color; -webkit-text-size-adjust:none;}
+header, footer, section, article, nav, figure, figcaption{display:block;}
+a{color:#666; text-decoration:none;}
+hr, caption, legend{display:none;}
+h1, h2, h3, h4, h5, h6{font-size:100%;}
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, form, fieldset, table, caption, tbody, tfoot, thead, tr, th, td, figure, img{@include no-space; border:0;}
+ul, ol, li{list-style:none;}
+table{width:100%; border-spacing:0; border:0;}
+p, div, th, td{font-size:100%;}
+img, input, select, textarea{vertical-align:middle;}
+input, select, textarea, button{font-family:$font; font-size:100%;}
+textarea{resize:none;}
+input[type="submit"], button{cursor:pointer;}
+button::-moz-focus-inner{padding:0; border:0;} //firefox bug fix
+::-moz-selection{color:#800000; background:#000;}
+::selection{color:#800000; background:#000;}
+
+.skip{position:absolute; top:0; left:-1000px; width:0; height:0; font-size:0; line-height:0;}
+
+/* layout */
+header{position:fixed; top:0; left:0; z-index:10; width:100%; height:50px; background:#000; background:rgba(0, 0, 0, .6);
+	h1{float:left; margin:15px 0 0 20px;
+		img{width:100px;}
+	}
+}
+nav{float:right; padding:15px 20px 0 0;
+	a{position:relative; float:left; margin:0 0 0 25px; font:{size:1.1em; weight:bold;} color:#fff; transition:$color-trans;
+		&:hover{color:$point-color;}
+		&:after{position:absolute; bottom:-3px; left:0; width:0; height:1px; content:''; background:$point-color; transition:width .2s;}
+		&:hover:after{width:100%;}
+		sup{display:inline-block; margin:-1px 0 0; font-size:0.7em; font-weight:normal;}
+	}
+}
+#main-section{position:relative; background:url(../images/index02_1.jpg) no-repeat center center fixed; background-size:100% auto;}
+.name{position:absolute; bottom:32%; left:0; width:100%; color:#fff; text-align:center;
+	strong{font-size:5.2em; text-shadow:0 0 3px #000}
+	p{font-size:3.3em;}
+}
+#work-section{background:#000;}
+.work-list{overflow:hidden;
+	li{position:relative; float:left; width:20%; overflow:hidden;
+		figure{position:relative; width:100%;}
+		img{position:relative; z-index:2; top:0; width:100%; transition:top .3s ease;}
+		&:hover img{top:-80px;}
+	}
+	figcaption{position:absolute; bottom:0; left:0; width:100%; height:80px; box-sizing:border-box; padding:15px; color:#fff; background:#000;}
+	.sbj{margin:0 0 5px; font-size:16px;}
+	.tag span{display:inline-block; margin:0 2px 0 0; padding:2px 5px; color:#000; opacity:.3; @include rounded(2px); background:#fff;}
+}
